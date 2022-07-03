@@ -1,30 +1,25 @@
-import React from "react";
-import {List} from "../List";
+import React, {useState} from "react";
 
 export const ListButtons = (props) => {
-    let state;
-    state = {value: 'обидеться'};
+    const [selectedValue, setSelectedValue] = useState('обидеться');
 
 
-    const handleChange = () => {
-        this.setState({value:this.value});
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
     }
 
-    const handleSubmit = () => {
-        alert('Выберите дествие: ' + state.value);
+    const handleSubmit = (event) => {
+        alert('Выберите дествие: ' + selectedValue);
 
-        function preventDefault() {
+        event.preventDefault();
 
-        }
-
-        preventDefault();
     }
 
      return (
             <form onSubmit={handleSubmit}>
                 <label>
                     Выберите действе:
-                    <select onChange={handleChange}>
+                    <select value={selectedValue} onChange={handleChange}>
                         <option value="спать">Спать</option>
                         <option value="работать">Работать</option>
                         <option value="проснуться недовольным">Проснусь недовольным</option>
