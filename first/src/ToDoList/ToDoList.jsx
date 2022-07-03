@@ -9,7 +9,8 @@ export const ToDoList = () => {
     const addText = (text) => {
         setItems([...items, { text: text } ])
     }
-    const minusText = () => {
+    const minusText = (text) => {
+        setItems([{}])
 
     }
     return (
