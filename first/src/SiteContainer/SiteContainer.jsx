@@ -1,10 +1,11 @@
 import React from "react";
 import {Counter} from "./Counter";
+import {ToDoList} from "../ToDoList";
 
 export const SiteContainer = () => {
     return (
         <div>
-            <Counter step={7}/>
+            <ToDoList />
             <Counter initial={-7} step={7}/>
          </div>
     )
