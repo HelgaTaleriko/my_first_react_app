@@ -6,7 +6,7 @@ export const List = () => {
     return (
         <div>
             <ListDisplay/>
-            <ListButtons/>
+            <ListButtons />
         </div>
 
     )

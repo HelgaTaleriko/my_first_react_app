@@ -1,49 +1,46 @@
 import React from "react";
-export {List} from "../List";
 
 
+export const ListButtons = (props)=> {
+    this.state = {value: 'обидеться'};
+    handleChange = handleChange.bind(this);
+    handleSubmit = handleSubmit.bind(this);
 
-class FlavorForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: 'обидеться'};
+    function handleChange(props) {
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
+    handleChange (props)
+    {
+        let target;
+        this.setState({value:target.value});
     }
 
-    handleSubmit(event) {
-        alert('Выберите дествие: ' + this.state.value);
-        event.preventDefault();
+    function handleSubmit(props) {
+
     }
 
-    render() {
-        return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Выберите действе:
-                    <select value={this.state.value} onChange={this.handleChange}>
-                        <option value="offend">Спать</option>
-                        <option value="lime">Работать</option>
-                        <option value="coconut">Проснусь недовольным</option>
-                        <option value="mango">Обидеться</option>
-                        <option value="mango">Буду игнорировать близких</option>
-                        <option value="mango">Включу mood похуй</option>
-                        <option value="mango">Рубиться в компуктер</option>
-                        <option value="mango">Обижать всех своим поведением</option>
-                    </select>
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
-        );
+    handleSubmit(props)
+    {
+            alert('Выберите дествие: ' + this.state.value);
     }
+
+    return (
+                <div onSubmit={handleSubmit}>
+                    <label>
+                        Выберите действе:
+                        <select value={this.state.value} onChange={handleChange}>
+                            <option value="offend">Спать</option>
+                            <option value="lime">Работать</option>
+                            <option value="coconut">Проснусь недовольным</option>
+                            <option value="mango">Обидеться</option>
+                            <option value="mango">Буду игнорировать близких</option>
+                            <option value="mango">Включу mood похуй</option>
+                            <option value="mango">Рубиться в компуктер</option>
+                            <option value="mango">Обижать всех своим поведением</option>
+                        </select>
+                    </label>
+                    <input type="submit" value="Submit"/>
+                </div>
+    );
 }
-
-render(
-    <FlavorForm />,
-    document.getElementById('root')
-);

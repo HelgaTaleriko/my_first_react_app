@@ -1,12 +1,12 @@
 import React from "react";
 import {Counter} from "./Counter";
 import {ToDoList} from "../ToDoList";
-import {List} from ".../List"
+import {List} from "../List"
 
 export const SiteContainer = () => {
     return (
         <div>
-            <List />
+            <List/>
             <ToDoList />
             <Counter initial={-7} step={7}/>
          </div>
