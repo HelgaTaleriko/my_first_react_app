@@ -7,8 +7,7 @@ export const ListButtons = (props) => {
 
 
     const handleChange = () => {
-        let target;
-        this.setState({value:target.value});
+        this.setState({value:this.value});
     }
 
     const handleSubmit = () => {
@@ -25,18 +24,18 @@ export const ListButtons = (props) => {
             <form onSubmit={handleSubmit}>
                 <label>
                     Выберите действе:
-                    <select value={state.value} onChange={handleChange}>
-                        <option value="offend">Спать</option>
-                        <option value="lime">Работать</option>
-                        <option value="coconut">Проснусь недовольным</option>
-                        <option value="mango">Обидеться</option>
-                        <option value="mango">Буду игнорировать близких</option>
-                        <option value="mango">Включу mood похуй</option>
-                        <option value="mango">Рубиться в компуктер</option>
-                        <option value="mango">Обижать всех своим поведением</option>
+                    <select onChange={handleChange}>
+                        <option value="спать">Спать</option>
+                        <option value="работать">Работать</option>
+                        <option value="проснуться недовольным">Проснусь недовольным</option>
+                        <option value="обидеться">Обидеться</option>
+                        <option value="игнорировать">Буду игнорировать близких</option>
+                        <option value="похуй">Включу mood похуй</option>
+                        <option value="компуктер">Рубиться в компуктер</option>
+                        <option value="обижать">Обижать всех своим поведением</option>
                     </select>
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Выбрать" />
             </form>
         );
     }
