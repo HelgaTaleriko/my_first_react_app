@@ -1,32 +1,31 @@
 import React from "react";
-export {List} from "../List";
+import {List} from "../List";
+
+export const ListButtons = (props) => {
+    let state;
+    state = {value: 'обидеться'};
 
 
-
-class FlavorForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: 'обидеться'};
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+    const handleChange = () => {
+        let target;
+        this.setState({value:target.value});
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
+    const handleSubmit = () => {
+        alert('Выберите дествие: ' + state.value);
+
+        function preventDefault() {
+
+        }
+
+        preventDefault();
     }
 
-    handleSubmit(event) {
-        alert('Выберите дествие: ' + this.state.value);
-        event.preventDefault();
-    }
-
-    render() {
-        return (
-            <form onSubmit={this.handleSubmit}>
+     return (
+            <form onSubmit={handleSubmit}>
                 <label>
                     Выберите действе:
-                    <select value={this.state.value} onChange={this.handleChange}>
+                    <select value={state.value} onChange={handleChange}>
                         <option value="offend">Спать</option>
                         <option value="lime">Работать</option>
                         <option value="coconut">Проснусь недовольным</option>
@@ -41,9 +40,4 @@ class FlavorForm extends React.Component {
             </form>
         );
     }
-}
 
-render(
-    <FlavorForm />,
-    document.getElementById('root')
-);
