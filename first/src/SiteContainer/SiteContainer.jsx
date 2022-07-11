@@ -1,7 +1,7 @@
 import React from "react";
 import {Counter} from "./Counter";
 import {ToDoList} from "../ToDoList";
-import {List} from ".../List"
+import {List} from "../List"
 
 export const SiteContainer = () => {
     return (
